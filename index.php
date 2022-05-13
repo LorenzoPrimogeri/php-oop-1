@@ -22,11 +22,11 @@ class movie
         $this->year = $_year;
         $this->actor = $_actor;
     }
-    public function stampa($_name, $_year, $_actor)
+    public function stampa()
     {
-        echo ("il nome è:" + $_name);
-        echo ("il year è:" + $_year);
-        echo ("il actor è:" + $_actor);
+        echo ("<p>il nome è:" . $this->_name . "</p>");
+        echo ("<p>il year è:" . $this->year . "</p>");
+        echo ("<p>il actor è:" . $this->actor . "</p>");
     }
 }
 
@@ -36,14 +36,9 @@ $ilClassico = new movie("ilClassico");
 $miglioVerde->set(1990, "augustin lopez");
 $ilClassico->set(2001, "jenifer lopez");
 
-$miglioVerde->stampa($miglioVerde->name, $miglioVerde->year, $miglioVerde->actor);
+$miglioVerde->stampa();
+$ilClassico->stampa();
 
-echo ("<pre>");
-print_r($miglioVerde);
-echo ("</pre>");
-echo ("<pre>");
-print_r($ilClassico);
-echo ("</pre>");
 ?>
 <!DOCTYPE html>
 <html lang="en">
@@ -52,7 +47,6 @@ echo ("</pre>");
     <meta charset="UTF-8">
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-
     <title>Document</title>
 </head>
 
