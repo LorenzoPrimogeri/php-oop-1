@@ -24,7 +24,7 @@ class movie
     }
     public function stampa()
     {
-        echo ("<p>il nome è:" . $this->_name . "</p>");
+        echo ("<p>il nome è:" . $this->name . "</p>");
         echo ("<p>il year è:" . $this->year . "</p>");
         echo ("<p>il actor è:" . $this->actor . "</p>");
     }
@@ -38,6 +38,7 @@ $ilClassico->set(2001, "jenifer lopez");
 
 $miglioVerde->stampa();
 $ilClassico->stampa();
+echo ("<pre>");
 
 ?>
 <!DOCTYPE html>
