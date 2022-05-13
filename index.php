@@ -12,17 +12,38 @@ class movie
     public $year;
     public $actor;
 
-
-    function __construct($_name, $_year, $_actor)
+    function __construct($_name)
     {
         $this->name = $_name;
+    }
+
+    public function set($_year, $_actor)
+    {
         $this->year = $_year;
         $this->actor = $_actor;
     }
+    public function stampa($_name, $_year, $_actor)
+    {
+        echo ("il nome è:" + $_name);
+        echo ("il year è:" + $_year);
+        echo ("il actor è:" + $_actor);
+    }
 }
-$miglioVerde = new movie("miglioverde", 2002, "tom Cruise");
-echo ($miglioVerde);
 
+$miglioVerde = new movie("miglioverde");
+$ilClassico = new movie("ilClassico");
+
+$miglioVerde->set(1990, "augustin lopez");
+$ilClassico->set(2001, "jenifer lopez");
+
+$miglioVerde->stampa($miglioVerde->name, $miglioVerde->year, $miglioVerde->actor);
+
+echo ("<pre>");
+print_r($miglioVerde);
+echo ("</pre>");
+echo ("<pre>");
+print_r($ilClassico);
+echo ("</pre>");
 ?>
 <!DOCTYPE html>
 <html lang="en">
